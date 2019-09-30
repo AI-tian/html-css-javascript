@@ -1,0 +1,446 @@
+@charset "utf-8";
+/*头部开始 */
+.headerbox{
+	width:100%;
+}
+/*头部上部开始 */
+.headerbox .topheader{
+	width:100%;
+	height:40px;
+	background-color:#333;
+}
+/*头部导航内容开始 */
+.topheader .topnav-box{
+	height:40px;
+	background-color:#333;
+}
+/*左边导航开始 */
+.topnav-box .left-nav{
+	float:left;
+	width:720px;
+	line-height:40px;
+	font-size:12px;
+	color:#b0b0b0;
+}
+.left-nav a{
+	height:40px;
+	color:#b0b0b0;
+}
+.left-nav a:hover{
+	color:#fff;
+}
+.left-nav::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.left-nav li{
+	position:relative;
+	float:left;
+	margin-right:15px;
+}
+/*二维码二级菜单开始 */
+.second-Or{
+	display:none;
+	position:absolute;
+	top:45px;
+	left:-33px;	
+	width:120px;
+	height:120px;
+	background-color:#fff;
+	box-shadow:0 0 10px rgb(170, 170, 170);	
+	z-index:999;
+}
+.second-Or::after{
+	position:absolute;
+	top:-10px;
+	left:48px;
+	content:"";
+	display:block;
+	width:0;
+	height:0;
+	border:10px solid #fff;
+	border-right:10px solid transparent;
+	border-bottom:10px solid transparent;
+	transform:rotate(45deg);
+
+}
+.second-Or .orpic{
+	width:80px;
+	height:80px;
+	margin:5px auto 0;
+}
+.second-Or .or-word{
+	width:80px;
+	margin:auto;
+	text-align:center;
+	color:#000;
+}
+/*二维码二级菜单结束*/
+.left-nav li:nth-child(11):hover .second-Or{
+	display:block;
+}
+/*左边导航结束 */
+
+/*右边导航开始 */
+.topnav-box .right-nav{	
+	float:right;
+	width:267px;
+	font-size:12px;
+	line-height:40px;
+	color:#b0b0b0;
+}
+.right-nav li{
+	position:relative;
+	float:left;
+	margin-right:18px;
+}
+.right-nav a{
+	color:#b0b0b0;
+}.right-nav a:hover{
+	color:#fff;
+}
+.right-nav li:nth-child(4){
+	background-color:#424242;	
+	margin-right:0;
+	margin-left:10px;
+}
+.right-nav li:nth-child(4) a{
+	position:relative;
+	float:left;
+	display:block;
+	padding: 0 20px 0 35px;
+}
+.right-nav li:nth-child(4) a:hover{
+	background-color:#fff;
+	color:#f90;
+}
+.right-nav li:nth-child(4) .iconfont{
+	position:absolute;
+	top:calc(50% - 10px);
+	left:0;
+	display:block;
+	width:20px;
+	height:20px;
+	margin-left:10px;
+	font-size:18px;
+	color:#b0b0b0;
+	line-height:20px;
+}
+.right-nav li:nth-child(4) a:hover .iconfont{
+	position:absolute;
+	top:calc(50% - 10px);
+	left:0;
+	display:block;
+	width:20px;
+	height:20px;
+	margin-left:10px;
+	font-size:18px;
+	color:#f90;
+	line-height:20px;
+}
+/* 购物车二级菜单开始 */
+.right-nav li:nth-child(4) a .second-shop{
+	position:absolute;
+	top:40px;
+	right:-2px;
+	width:320px;
+	height:0px;
+	background-color:#fff;
+	color:#000;
+	text-align:center;
+	line-height:100px;
+	box-shadow:0px 1px 2px rgb(170, 170, 170);
+	transition:height 0.5s;
+	-moz-transition:height 0.5s; /* Firefox 4 */
+	-webkit-transition:height 0.5s; /* Safari and Chrome */
+	-o-transition:height 0.5s; /* Opera */
+	-webkit-transition:height 0.5s; /* Safari and Chrome */
+	z-index:9999;
+}
+.right-nav li:nth-child(4) a:hover .second-shop{
+	height:100px;
+}
+
+/*右边导航结束 */
+/*头部导航内容结束 */
+/* 头部下部开始 */
+.headerbox .underwrap{
+	position:relative;
+	width:100%;	
+	height:100px;
+}
+.underwrap	.underbox{
+	height:100px;
+}
+/* 头部logo开始 */
+.underbox .iconbox{
+	float:left;
+	display:block;
+	width:60px;
+	height:60px;
+	margin:17px 0 0 0;
+}
+/* 头部下导航开始 */
+.underbox .undernav{
+	float:left;
+	width:540px;
+	height:100px;
+	margin-left:100px;
+}
+.undernav li{
+	float:left;
+	height:100px;
+	line-height:100px;
+	padding-right:23px;
+	z-index:999;
+} 
+.underbox li a{
+	color:#333;
+}
+.underbox li  a:hover{
+	color:#f70;
+}
+.othernav{
+	float:left;
+	height:100px;
+	line-height:100px;
+	margin-right:22px;
+}
+.othernav a{
+	color:#333;
+	line-height:100px;
+}
+.othernav a:hover{
+	color:#f70;
+}
+/* 头部导航二级菜单开始 */
+.undernav li .secondbox{
+	position:absolute;
+	top:100px;
+	left:0;
+	width:100%;
+	height:0px;
+	background-color:#fff;
+	box-shadow:0px 1px 5px rgb(170, 170, 170);
+	transition:height 0.1s;
+	-moz-transition:height 0.1s; /* Firefox 4 */
+	-webkit-transition:height 0.1s; /* Safari and Chrome */
+	-o-transition:height 0.1s; /* Opera */
+	-webkit-transition:height 0.1s; /* Safari and Chrome */
+	z-index:999;
+}
+.mi1{
+	position:absolute;
+	top:100px;
+	left:0;
+	right:0;
+	width:1226px;
+	height:200px;
+	margin:auto;
+	background-color:#fff;
+	margin:auto
+}
+.mi1 li{
+	position:relative;
+	width:203px;	
+	height:200px;
+	background-color:#fff;
+	margin:0;
+	padding:0;
+}
+.mi li .xmpic{
+	width:130px;
+	height:110px;
+	margin:30px auto 10px;
+}
+/* 小米手机二级菜单开始 */
+.undernav:hover .secondbox{
+	height:200px;
+}
+.undernav li .secondbox .xmi{
+	display:none;
+	width:1226px;
+	margin:auto;
+	z-index:9999;
+}
+.xmi li{
+	position:relative;
+	width:203px;	
+	height:200px;
+	background-color:#fff;
+	margin:0;
+}
+.xmi li .xmpic{
+	width:130px;
+	height:110px;
+	margin:30px auto 10px;
+}
+.undernav li:nth-child(1):hover .xmi{
+	display:block;
+}
+/* 小米手机二级菜单结束 */
+/* 红米二级菜单开始 */
+.undernav li:nth-child(2) .red-mi{
+	display:none;
+}
+.undernav li:nth-child(2):hover .red-mi{
+	display:block;
+}
+
+/* 红米二级菜单结束 */
+/* 电视二级菜单开始 */
+.undernav li:nth-child(3) .tv{
+	display:none;
+}
+.undernav li:nth-child(3):hover .tv{
+	display:block;
+}
+/* 电视二级菜单结束 */
+/* 笔记本二级菜单开始 */
+.undernav li:nth-child(4) .netbook{
+	display:none;
+}
+.undernav li:nth-child(4):hover .netbook{
+	display:block;
+}
+/* 笔记本二级菜单结束 */
+/*家电二级菜单开始 */
+.undernav li:nth-child(5) .homeappliance{
+	display:none;
+}
+.undernav li:nth-child(5):hover .homeappliance{
+	display:block;
+}
+/* 家电二级菜单结束 */
+/*新品二级菜单开始 */
+.undernav li:nth-child(6) .homeappliance{
+	display:none;
+}
+.undernav li:nth-child(6):hover .homeappliance{
+	display:block;
+}
+/* 新品二级菜单结束 */
+/*新品二级菜单开始 */
+.undernav li:nth-child(7) .router{
+	display:none;
+}
+.undernav li:nth-child(7):hover .router{
+	display:block;
+}
+/* 新品二级菜单结束 */
+/*智能硬件二级菜单开始 */
+.undernav li:nth-child(8) .smart{
+	display:none;
+}
+.undernav li:nth-child(8):hover .smart{
+	display:block;
+}
+/*智能硬件二级菜单结束 */
+/* 头部导航二级菜单结束 */
+/* 头部下导航结束 */
+/* 头部搜索框开始 */
+.underbox .inputbox{
+	float:right;
+	width:302px;
+	height:100px;
+}
+.inputbox .input{
+	position:relative;
+	width:100%;
+	margin-top:25px;
+}
+.inputbox .input::after{
+	content:"";
+	display:block;
+	clear:both;	
+}
+.input .txt{
+	float:left;
+	outline:none;
+	width:245px;
+	height:50px;
+	border:1px solid #e0e0e0;
+	line-height:50px;
+}
+.inputbox .btn{
+	float:left;
+	display:block;
+	width:52px;
+	height:52px;
+	background-color:#fff;
+	border:1px solid #e0e0e0;
+	border-left:none;
+	color:#666;
+	text-align:center;
+	line-height:52px;
+	font-weight:bold;
+	cursor:pointer;
+}
+.inputbox .btn .iconfont{
+	font-size:20px;
+}
+.inputbox:hover .txt{
+	border:1px solid #b0b0b0;
+}	
+.inputbox:hover .btn{
+	border:1px solid #b0b0b0;
+	border-left:none;
+}
+.inputbox .btn:hover{
+	background-color:#f50;
+	border:1px solid #f50;
+	border-left:none;
+	color:#fff;
+}
+/* 搜索框二级菜单开始 */
+ .input .second-input{
+	display:none;
+	position:absolute;
+	top:54px;
+	left:0;
+	width:245px;
+	background-color:#fff;
+	border:1px solid #f50;
+	border-top:none;
+	z-index:999;
+}
+.second-input > li{
+	position:relative;
+	width:100%;	
+	color:#5f5f5f;
+	font-size:12px;
+	line-height:30px;
+	text-indent:1em;
+	cursor:pointer;
+}
+.inp{
+	top:0;
+	right:10px;
+}
+.second-input > li:hover{
+	background-color:#fafafa;
+}
+.inpword{
+	position:absolute;
+	top:calc(50% - 8px);
+	background-color:#eee;
+	padding:1px 5px;
+	color:#757575;
+	font-size:12px;
+}
+.inpword:hover{
+	background-color:#f90;
+	color:#fff;
+}
+.word1{
+	
+	right:140px;
+}
+.word2{
+	right:60px;
+}
+/* 搜索框二级菜单结束 */
+/* 头部搜索框结束 */
+/* 头部下部结束 */
+/*头部结束 */

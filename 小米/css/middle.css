@@ -1,0 +1,420 @@
+@charset "utf-8";
+/* 中部开始 */
+.middlewrap{
+	width:100%;
+}
+/* 轮播图开始 */
+.middlewrap .slideshowbox{
+	position:relative;
+	height:460px;
+}
+.slideshowbox .shuff{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+.shuff li{
+	position:absolute;
+	width:100%;
+	height:100%;
+	opacity:0;
+	transition-duration:1s;
+}
+.shuff li.active{
+	opacity:1;
+}
+/* 轮播图结束 */
+/* 左侧菜单栏开始 */
+.slideshowbox .leftmenubox{
+	position:absolute;
+	top:0;
+	left:0;
+	width:230px;
+	height:100%;
+	background-color:rgba(0,0,0,0.6)
+} 
+.leftmenubox .menuwrap{
+	width:100%;
+	margin:30px 0 20px 0;
+}
+.menuwrap li{
+	width:100%;
+	padding-left:15px;
+	color:#fff;
+	font-size:14px;
+	font-family:"微软雅黑";
+	line-height:40px;
+	box-sizing:border-box;
+	cursor:pointer;
+}
+.menuwrap li .menu-a{
+	color:#fff;
+}
+.morearrow{
+	float:right;
+	display:block;
+	width:8px;
+	height:8px;
+	margin:14px 25px 0 0;
+	border-top:2px solid #fff;	
+	border-right:2px solid #fff;	
+	transform:rotate(45deg);
+	box-sizing:border-box;
+}
+.menuwrap li:hover{
+	background-color:#ff6700;
+}
+ .shuff-secondmenu{
+	display:none;
+	position:absolute;
+	top:0;
+	left:230px;
+	background-color:#fff;
+	box-shadow:0 0 10px rgba(170,170,170);
+	z-index:99;
+}
+.menu1{
+	width:996px;
+}
+.menu2{
+	width:550px;
+}
+.menu3{
+	width:800px;
+}
+.menu-list{
+	float:left;
+	width:245px;
+	height:460px;
+	margin:0 0 0 2px;
+}
+.menu-list dt{
+	width:100%;
+}
+.menu-list dt a{
+	margin-left:5px;
+	color:#000;
+	line-height:77px;
+}
+.menu-list dt a:hover{
+	color:#f90;
+}
+.menupic{
+	float:left;
+	display:inline-block;
+	width:40px;
+	height:40px;
+	margin:20px 0 0 10px;
+}
+
+.menuwrap li:hover .shuff-secondmenu{
+	display:block;
+}
+/* 左侧菜单栏结束 */
+/* 轮播图左右按钮开始 */
+.shuffbtn{
+	position:absolute;
+	width:40px;
+	height:60px;
+	background-color:rgba(0,0,0,0);
+	cursor:pointer;
+	z-index:99;
+}
+.arrow{
+	position:absolute;
+	width:30px;
+	height:30px;
+}
+.Lar{
+	top:calc(50% - 30px);
+	left:230px;
+	margin:13px 0 0 10px;
+	border-left:2px solid #f7f7f7;
+	border-top:2px solid #f7f7f7;
+	transform:rotate(-45deg);
+}
+.Rar{
+	top:calc(50% - 30px);
+	right:10px;
+	margin:13px 0 0 0px;
+	border-right:2px solid #f7f7f7;
+	border-top:2px solid #f7f7f7;
+	transform:rotate(45deg);
+}
+.Lshuff{
+	top:calc(50% - 30px);
+	left:230px;
+}
+.Rshuff{
+	top:calc(50% - 30px);
+	right:	0px;
+}
+.shuffbtn:hover{
+	background-color:rgba(0,0,0,0.3);
+}
+/* 轮播图左右按钮结束 */
+/* 轮播图选项卡开始 */
+.slideshowbox .tabbox{
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	width:120px;
+	height:50px;
+}
+.tabbox .shufftab{
+	float:left;
+	display:block;
+	width:6px;
+	height:6px;
+	background-color:#666;
+	margin:15px 5px 0 5px;
+	border:2px solid #f9f9f9;
+	border-radius:10px;
+	cursor:pointer;
+}
+.tabbox .shufftab.tab-bg{
+	background-color:#f9f9f9;
+	border:2px solid #666;
+}	
+/* 轮播图选项卡结束 */
+/* 选购手机开始 */
+.middlewrap .choosewrap{
+	margin-top:15px;
+	background-color:#fff;
+}
+.choosewrap:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.choosewrap .choose-listbox{
+	float:left;
+	width:235px;
+	background-color:#5f5750;
+}
+.choose-listbox li{
+	position:relative;
+	float:left;
+	width:75px;
+	height:85px;
+	margin:0px 0 0 2px;
+}
+.choose-listbox li .iconfont{
+	display:block;
+	width:40px;
+	height:40px;
+	margin:15px auto 0;
+	color:#cfcdcb;
+	font-size:30px;
+	text-align:center;
+	line-height:40px;
+	cursor:pointer;
+}
+.choose-listbox li a{
+	display:block;
+	margin:5px 0 0 0;
+	color:#cfcdcb;
+	font-size:14px;
+	text-align:center;
+}
+.choose-listbox li p:hover .iconfont{
+	color:#fff;
+}
+.choose-listbox li p:hover a{
+	color:#fff;
+}
+.right-line{
+	position:absolute;
+	top:calc(50% - 40px);
+	right:0;
+	content:"";
+	display:block;
+	width:1px;
+	height:80px;
+	background-color:#665e57;
+}
+.bottom-line{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	content:"";
+	display:block;
+	width:70px;
+	height:1px;
+	background-color:#665e57;
+	margin:auto;
+}
+.choosewrap .choosepic{
+	float:left;
+	width:315px;
+	height:170px;
+	background-color:#c30;
+	margin-left:15px;
+}
+/* 选购手机结束 */
+/* 小米闪购开始 */
+.middlewrap .flashsales-wrap{
+	overflow:hidden;
+	position:relative;
+	background-color:#fff;
+}
+.flashsales-wrap:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.flashsales-wrap h5{
+	width:100%;
+	height:60px;
+	background-color:#fff;
+	font-weight:normal;
+}
+.flashsales-wrap .sales-btnbox{
+	float:right;
+	width:200px;
+	height:100%;
+}
+.flashsales-wrap .titlebox{
+	float:left;
+	display:block;
+	width:200px;
+	line-height:60px;
+	color:#333;
+	font-size:22px;
+	font-weight:200;
+}
+.sales-btnbox .salesbtn{
+	float:right;
+	display:block;
+	width:35px;
+	height:25px;
+	background-color:#fff;
+	margin-top:20px;
+	border:1px solid #e0e0e0;
+	color:#b0b3b9;
+	font-size:25px;
+	line-height:20px;
+	text-align:center;
+	cursor:pointer;
+	user-select:none;
+}
+.salesbtn:nth-child(1){
+	border-right:none;
+}
+.flashsales-wrap .timebox{
+	position:absolute;
+	top:60px;
+	left:0;
+	width:235px;
+	height:340px;
+	background-color:#f1eded;
+}
+.timebox .time-title{
+	width:100%;
+	margin-top:50px;
+	line-height:40px;
+	font-size:21px;
+	color:#ef3a3b;
+	text-align:center;
+}
+.timebox img{
+	display:block;
+	width:34px;
+	height:53px;
+	margin:20px auto;
+}
+.timebox .endbox{
+	width:100%;
+	color:#6f6d6d;
+	font-size:15px;
+	line-height:40px;
+	text-align:center;
+}
+.timebox .tablebox{
+	width:100%;
+	padding:0 0 0 28px;
+	margin-top:10px;
+	box-sizing:border-box;
+}
+.timetable{
+	display:block;
+	float:left;
+	width:45px;
+	height:45px;
+	background-color:#605751;
+	color:#fff;
+	font-size:28px;
+	text-align:center;
+	line-height:45px;
+}
+.colon{
+	display:block;
+	float:left;
+	width:20px;
+	color:#605751;
+	font-size:28px;
+	text-align:center;
+	line-height:45px;
+}
+.flashsales-wrap .contentwrap{
+	float:left;
+	overflow:hidden;
+	width:5000px;
+	height:340px;
+	margin-left:250px;
+}
+.contentwrap .consales{
+	display:inline-block;
+	width:985px;
+	height:340px;
+	background-color:#fff;
+	transition-duration:0.5s;
+}
+.on1{
+	margin-left:-990px
+}
+
+.consales li{
+	position:relative;
+	float:left;
+	width:230px;
+	height:340px;
+	background-color:#fff;
+	margin-right:15px;
+}
+.consalespicbox{
+	width:200px;
+	height:200px;
+	background-color:#fff;
+	margin:20px auto 0;
+}
+.consalesline{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:1px;
+}
+.color1{
+	background-color:#ffac13;
+}
+.color2{
+	background-color:#83c44e;
+}
+.color3{
+	background-color:#2196f3;
+}
+.color4{
+	background-color:#e53935;
+}
+.color5{
+	background-color:#00c0a5;
+}
+.black-iphone{
+	float:left;
+	height:120px;
+	margin:40px 0;	
+}
+/* 小米闪购结束*/
+/* 中部结束 */

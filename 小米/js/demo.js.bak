@@ -1,0 +1,126 @@
+//获取元素
+var otxt=document.getElementsByClassName("txt")[0],
+	obtn=document.getElementsByClassName("btn")[0],
+	osecondinput=document.getElementsByClassName("second-input")[0],
+	onav=document.getElementsByClassName("on"),
+	oxmi=document.getElementsByClassName("secondbox"),
+	oshuffbtn=document.getElementsByClassName("shuffbtn"),
+	oli=document.querySelectorAll(".shuff li"),
+	otab=document.getElementsByClassName("shufftab"),
+	oinputword=document.getElementsByClassName("inpword"),
+	osalesbtn=document.getElementsByClassName("salesbtn"),
+	oconsales=document.getElementsByClassName("consales"),
+	num=0,
+	a=0;
+	osalesbtn[1].style.cssText="color:#e0e0e0";
+	osalesbtn[0].onmouseover=function(){
+		this.style.cssText="color:#F60"
+	}
+	osalesbtn[0].onmouseout=function(){
+		this.style.cssText="color:#b0b3b9"
+	}
+	//轮播图点击事件开始
+	otxt.onclick=function(){//鼠标点击获取焦点
+		this.style.cssText="border:1px solid #f50";
+		obtn.style.cssText="border:1px solid #f50;border-left:none"
+		osecondinput.style.cssText="display:block"
+		oinputword[0].style.cssText="display:none"
+		oinputword[1].style.cssText="display:none"
+	}
+	otxt.onblur=function(){//鼠标点击失去焦点
+		this.style.cssText="border:1px solid #bobobo";
+		obtn.style.cssText="border:1px solid #bobobo;border-left:none"
+		osecondinput.style.cssText="display:none"
+		oinputword[0].style.cssText="display:block"
+		oinputword[1].style.cssText="display:block"
+	}
+	function run(){
+		oli[num].className="";
+				otab[num].className="shufftab";
+				num++;
+				if(num > 4){
+					num=0;
+				}
+				oli[num].className="active";
+				otab[num].className="shufftab tab-bg";
+	}
+	setInterval(run,1000)
+	for(var i=0,len=oli.length;i<len;i++){
+		(function(i){
+			oshuffbtn[1].onclick=function(){
+				oli[num].className="";
+				otab[num].className="shufftab";
+				num++;
+				if(num > 4){
+					num=0;
+				}
+				oli[num].className="active";
+				otab[num].className="shufftab tab-bg";
+			}
+			oshuffbtn[0].onclick=function(){
+				oli[num].className="";
+				otab[num].className="shufftab";
+				num--;
+				if(num < 0){
+					num=4;
+				}
+				oli[num].className="active";
+				otab[num].className="shufftab tab-bg";
+			}
+			otab[i].onmouseover=function(){
+				otab[num].className="shufftab";
+				oli[num].className="";
+				num=i;
+				otab[num].className="shufftab tab-bg"
+				oli[num].className="active";
+			}
+		})(i)
+	}
+	//轮播图点击事件结束
+	//小米闪购点击事件开始
+	osalesbtn[0].onclick=function(){
+		osalesbtn[1].style.cssText="color:#b0b3b9";
+		osalesbtn[1].onmouseover=function(){
+		this.style.cssText="color:#F60"
+		}
+		osalesbtn[1].onmouseout=function(){
+		this.style.cssText="color:#b0b3b9"
+		}
+		oconsales[a].className="consales on1";
+		a++;
+		if(a>=4){
+			a=4;
+			osalesbtn[0].style.cssText="color:#e0e0e0";
+			osalesbtn[0].onmouseover=function(){
+			this.style.cssText="color:#e0e0e0"
+			}
+			osalesbtn[0].onmouseout=function(){
+			this.style.cssText="color:#e0e0e0"
+			}
+		}
+		oconsales[a-1].className="consales on1";
+		oconsales[4].className="consales";
+	}
+	osalesbtn[1].onclick=function(){
+		osalesbtn[0].style.cssText="color:#b0b3b9";
+		osalesbtn[0].onmouseover=function(){
+		this.style.cssText="color:#F60"
+		}
+		osalesbtn[0].onmouseout=function(){
+		this.style.cssText="color:#b0b3b9"
+		}
+		oconsales[a].className="consales";
+		a--;
+		if(a<=0){
+			a=0;
+			osalesbtn[1].style.cssText="color:#e0e0e0";
+			osalesbtn[1].onmouseover=function(){
+			this.style.cssText="color:#e0e0e0"
+			}
+			osalesbtn[1].onmouseout=function(){
+			this.style.cssText="color:#e0e0e0"
+			}
+		}
+		oconsales[a].className="consales";
+	}
+	//小米闪购点击事件结束
